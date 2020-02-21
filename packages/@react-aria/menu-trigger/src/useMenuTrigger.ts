@@ -26,6 +26,7 @@ export function useMenuTrigger(props: MenuTriggerProps, state: MenuTriggerState)
 
   let onPress = () => {
     if (!isDisabled) {
+      state.setFocusStrategy('first');
       state.setOpen(!state.isOpen);
     }
   };
